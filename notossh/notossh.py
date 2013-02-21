@@ -975,7 +975,7 @@ def notify_growl(opts, cmd_opts, args):
 # define the command used with linux systems
 def notify_dbus(opts, cmd_opts, args):
     args = args.split(':')
-    n = Notify.Notification.new(':'.join(args[1:]), args[0], os.path.join(WORKDIR, 'irssi.png'))
+    n = Notify.Notification.new(args[0], ':'.join(args[1:]), os.path.join(WORKDIR, 'irssi.png'))
     n.set_category("im.received")
     n.show()
     return 0
